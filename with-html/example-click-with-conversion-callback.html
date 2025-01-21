@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <title>Tracking click example</title>
+    <!-- Trackdesk tracker begin -->
+    <script async src="//cdn.trackdesk.com/tracking.js"></script>
+    <script>
+        (function(t,d,k){(t[k]=t[k]||[]).push(d);t[d]=t[d]||t[k].f||function(){(t[d].q=t[d].q||[]).push(arguments)}})(window,"trackdesk","TrackdeskObject");
+
+        trackdesk("robocop", "click", {}, () => {
+            trackdesk("robocop", "conversion", {
+                conversionType: "sale",
+                amount: {
+                    value: "4.50"
+                },
+                externalId: "eid-1",
+                customerId: "cid-11",
+                customParams: {
+                    advS1: "123",
+                    advS3: {queryParam: "advS3"},
+                    advS5: {queryParam: "advS5"},
+                }
+            });
+        });
+    </script>
+    <!-- Trackdesk tracker end -->
+</head>
+<body style="padding-top:100px;text-align: center">
+    <h1>Tracking click example</h1>
+</body>
+</html>
